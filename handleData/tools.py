@@ -1,10 +1,10 @@
 #!/usr/bin/python
 #coding=utf8
-'''
-Created on 2016年5月31日
+from datetime import datetime
+import os
 
-@author: shunweiwuxian
-'''
+from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.triggers.cron import CronTrigger
 
 def LLV(datas):
     return min(datas)
@@ -46,5 +46,17 @@ def dataFrameToArray(datasArray):
         array.append(round(data[0],3))
     return array
     
+def scheWithTrigger(name ,year=None, month=None, day=None, week=None, day_of_week=None, hour=None,
+                 minute=None, second=None, start_date=None, end_date=None, timezone=None):
+    scheduler = BlockingScheduler()
+    trigger = CronTrigger(year=year, month=month, day=day, week=week, day_of_week=day_of_week, hour=hour,
+                 minute=minute, second=second, start_date=start_date, end_date=end_date, timezone=timezone)
+    scheduler.add_job(name,trigger=trigger)
+    print('Listen start! %s' % datetime.now())
+    
+    try:
+        scheduler.start() 
+    except (KeyboardInterrupt,SystemExit):
+        pass
     
     

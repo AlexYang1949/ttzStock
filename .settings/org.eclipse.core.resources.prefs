@@ -1,6 +1,5 @@
 eclipse.preferences.version=1
 encoding//dataSource/__init__.py=utf8
-encoding//dataSource/getSource.py=utf8
 encoding//dataSource/stockK.py=utf8
 encoding//handleData/tools.py=utf8
 encoding//tushare/src/dailyData/getDataWithKType.py=utf-8
