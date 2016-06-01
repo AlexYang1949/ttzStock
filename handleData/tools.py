@@ -32,7 +32,6 @@ def MA(datas):
 
 def SMA(datas,N=1):
     length = len(datas)
-    ma = MA(datas[1:length])
     return (datas[0]*(N+1) + total(datas[1:length]))/(length+N)
         
 def total(datas):

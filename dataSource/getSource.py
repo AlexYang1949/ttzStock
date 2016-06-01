@@ -14,12 +14,11 @@ def tick():
     
 if __name__ == '__main__':
     scheduler = BlockingScheduler()
-    trigger = CronTrigger(hour='9-12,13-15',minute='*',second='20')
-    
+    trigger = CronTrigger(hour='9-12,13-19',minute='*',second='20,40')
     scheduler.add_job(tick,trigger=trigger)
     print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
     
     try:
-        scheduler.start()
+        scheduler.start() 
     except (KeyboardInterrupt,SystemExit):
         pass
