@@ -7,25 +7,23 @@ Created on 2016年5月31日
 '''
 from handleData import tools
 import numpy as np
-
-
 import tushare as ts
-from pycparser.c_ast import Switch
-from pip._vendor.distlib._backport.tarfile import TUREAD
-from blaze.expr.reductions import std
 
 class stockK(object):
     '''
     根据code创建一个对象
     '''
     
-    def __init__(self, code):
+    def __init__(self, code , ktype='D'):
         self.code = code
-        
+        self.ktype = ktype
+        self.listArray = None
+        self.getHistData()
+    
     def K(self,M1=3,N=9,ref=0):
-        dataArrayC = self.getHistData(N,'D','C')[ref:N+ref]
-        dataArrayH = self.getHistData(N,'D','H')
-        dataArrayL = self.getHistData(N,'D','L')
+        dataArrayC = self.getHistWithValueType('close')
+        dataArrayH = self.getHistWithValueType('high')
+        dataArrayL = self.getHistWithValueType('low')
         rsaArray = []
         for i in range(0,M1):
             close = dataArrayC[i+ref]
@@ -33,7 +31,8 @@ class stockK(object):
             hhv = tools.HHV(dataArrayH[i+ref:N+ref+i])
             rsa=(close-llv)/(hhv-llv)*100;                         
             rsaArray.append(rsa)
-        return tools.SMA(rsaArray, 1)
+        self.kValue = tools.SMA(rsaArray, 1)
+        return self.kValue
     
     def D(self,M2=3,N=9,ref=0):
         KArray = []
@@ -46,11 +45,13 @@ class stockK(object):
         KDYD = False
         KYYD= False
         BUYTURN = False
-        if ((self.K(ref=ref)>self.D(ref=ref)) & (self.K(ref=ref)>self.K(ref=ref+1))):
+        kValue = self.K()
+        dValue = self.D()
+        if ((kValue>dValue) & (kValue>self.K(ref=ref+1))):
             KDYD = True
-        if ((self.K(ref=ref)<self.D(ref=ref)) & (self.K(ref=ref)<self.K(ref=ref+1))):
+        if ((kValue<dValue) & (kValue<self.K(ref=ref+1))):
             KYYD= True
-        if self.K(ref=ref)>self.K(ref=ref+1):
+        if kValue>self.K(ref=ref+1):
             BUYTURN = True
         if (BUYTURN == True & KDYD==True):
             return "BUY"
@@ -76,15 +77,14 @@ class stockK(object):
         print "boll = %s ,ub = %s ,lb = %s,status = %s"%(boll,ub,lb,status)
 
         
-    def getHistData(self,N=20,ktype='D', value = 'C'):
+    def getHistData(self,N=20):
 #         print '需要获取周期：%s，取得周期%s' % (ktype, N)
-        df = ts.get_hist_data(self.code,start='2016-05-02',ktype=ktype)
-        if value =='C':
-             return tools.dataFrameToArray(df[['close']].values)
-        if value =='H':
-            return tools.dataFrameToArray(df[['high']].values)
-        if value == 'L':
-            return tools.dataFrameToArray(df[['low']].values)
-        else:
-            return None
+        df = ts.get_hist_data(self.code,start='2016-05-02',ktype=self.ktype)
+        self.listArray = df
+        
+        
+    def getHistWithValueType(self,type ='close'):
+#         open   high  close    low     volume  price_change  p_change 
+#         ma5    ma10    ma20      v_ma5     v_ma10     v_ma20  turnover 
+        return tools.dataFrameToArray(self.listArray[[type]].values)
         
