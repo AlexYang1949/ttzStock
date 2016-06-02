@@ -14,9 +14,9 @@ class stockK(object):
     根据code创建一个对象
     '''
     
-    def __init__(self, code):
+    def __init__(self, code , ktype='D'):
         self.code = code
-        self.ktype = 'D'
+        self.ktype = ktype
         self.listArray = None
         self.getHistData()
     
