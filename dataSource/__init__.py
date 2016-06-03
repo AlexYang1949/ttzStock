@@ -7,7 +7,7 @@ from datetime import datetime
 import sys
 import threading
 
-def dayWork():
+def dayWork(data):
     stockArray = [stockK("399001"),stockK("002273")]
     for stock in stockArray:
         printInfo(stock)
@@ -55,11 +55,7 @@ if __name__ == "__main__":
 
     for t in threads:
         t.start()
-    
 
-
-
-    
 
 #     tools.scheWithTrigger(name = thirtyMinWork,hour='9-11,13-15',
 #                  minute='01,31')
