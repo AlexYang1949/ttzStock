@@ -10,14 +10,23 @@ app = Flask(__name__)
 @app.route('/')
 # 视图函数
 def index():
-    user_agent = request.headers.get('User-Agent')
     return render_template('index.html')
 
 @app.route('/user/<name>')
 def user(name):
     return jsonify({'name' : name , 'age' : '123'})
 #     return '<h1>hello,%s!' % name
-
+@app.route('/stock')
+def stock():
+    code = request.args.get('code','399001')
+    ktype = request.args.get('ktype','D')
+    stock = stockK(code=code ,ktype = ktype)
+    k = stock.K()
+    d = stock.D()
+    status = stock.kdStatus()
+    json = jsonify({'code' : code ,'K': k,'D':d,'status':status})
+    return json
+    
 @app.route('/stock/<code>')
 def stockInfo(code):
     print request.json 
