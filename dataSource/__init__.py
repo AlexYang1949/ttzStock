@@ -27,6 +27,7 @@ def printInfo(stock):
     print stock.K()
     print stock.D()
     print stock.kdStatus()
+    print stock.BOLL()
     
 def printKInfo():
     stock = stockK(code='399001',ktype='30')
@@ -45,16 +46,16 @@ def thread2():
     tools.scheWithTrigger(name = thirtyMinWork ,second='20,40')
     
 if __name__ == "__main__":
-#     SixtyMinWork()
-    print 'start thread'
-    threads = []
-    t1 = threading.Thread(target=thread1)
-    threads.append(t1)
-    t2 = threading.Thread(target=thread2)
-    threads.append(t2)
+    SixtyMinWork()
+#     print 'start thread'
+#     threads = []
+#     t1 = threading.Thread(target=thread1)
+#     threads.append(t1)
+#     t2 = threading.Thread(target=thread2)
+#     threads.append(t2)
 
-    for t in threads:
-        t.start()
+#     for t in threads:
+#         t.start()
 
 
 #     tools.scheWithTrigger(name = thirtyMinWork,hour='9-11,13-15',
