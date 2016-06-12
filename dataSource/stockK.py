@@ -62,19 +62,24 @@ class stockK(object):
         return "TURN"
         
     def BOLL(self,ref=0):
-        dataArrayC = self.getHistData()[0:20]
+        dataArrayC = self.getHistWithValueType('close')[0:20]
         print len(dataArrayC)
         boll=tools.MA(dataArrayC)
         std = np.std(dataArrayC)
         ub = boll + 2*std
         lb = boll - 2*std
         c = dataArrayC[0]
-        status = (c - lb)/(ub-lb)
+        ulstatus = (c - lb)/(ub-lb)
+        cb = (c-boll) >= 0 
+        if cb:
+            bstatus = (c-boll)/(ub-boll)
+        else :
+            bstatus = (c-boll)/(boll-lb)
 #         需要计算以下状态
 #         1.价格在boll位置
 #         2.boll中轨朝向
 #         10295 9495
-        print "boll = %s ,ub = %s ,lb = %s,status = %s"%(boll,ub,lb,status)
+        return "close = %s ,boll = %s ,ub = %s ,lb = %s,ulstatus = %s ,bstatus = %s"%(dataArrayC[0],boll,ub,lb,ulstatus,bstatus)
 
         
     def getHistData(self,N=20):
@@ -85,6 +90,6 @@ class stockK(object):
         
     def getHistWithValueType(self,type ='close'):
 #         open   high  close    low     volume  price_change  p_change 
-#         ma5    ma10    ma20      v_ma5     v_ma10     v_ma20  turnover 
+#         ma5    ma10    ma20      v_ma5     v_ma10     v_ma20  turnover     
         return tools.dataFrameToArray(self.listArray[[type]].values)
         
