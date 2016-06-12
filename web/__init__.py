@@ -12,19 +12,20 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/user/<name>')
-def user(name):
-    return jsonify({'name' : name , 'age' : '123'})
-#     return '<h1>hello,%s!' % name
 @app.route('/stock')
 def stock():
     code = request.args.get('code','399001')
     ktype = request.args.get('ktype','D')
     stock = stockK(code=code ,ktype = ktype)
+    
+# 以下是可以获得的数据
     k = stock.K()
     d = stock.D()
-    status = stock.kdStatus()
-    json = jsonify({'code' : code ,'K': k,'D':d,'status':status})
+    statusKD = stock.kdStatus()
+    boll= stock.BOLL()
+    
+    json = jsonify({'code' : code ,'K': k,'D':d,'statusKD':statusKD,
+                    'boll' : boll})
     return json
     
 @app.route('/stock/<code>')
