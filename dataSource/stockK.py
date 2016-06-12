@@ -8,7 +8,6 @@ Created on 2016年5月31日
 from handleData import tools
 import numpy as np
 import tushare as ts
-from Cython.Plex.Regexps import BOL
 
 class stockK(object):
     '''
@@ -33,14 +32,14 @@ class stockK(object):
             rsa=(close-llv)/(hhv-llv)*100;                         
             rsaArray.append(rsa)
         self.kValue = tools.SMA(rsaArray, 1)
-        return self.kValue
+        return round(self.kValue,2)
     
     def D(self,M2=3,N=9,ref=0):
         KArray = []
         for i in range(0,M2):
             k = self.K(3, 9, i)
             KArray.append(k)
-        return tools.SMA(KArray, 1)
+        return round(tools.SMA(KArray, 1),2)
 
     def kdStatus(self,ref = 0):
         KDYD = False
@@ -65,23 +64,24 @@ class stockK(object):
     def BOLL(self,ref=0):
         dataArrayC = self.getHistWithValueType('close')[0:20]
         print len(dataArrayC)
-        boll=tools.MA(dataArrayC)
+        boll=round(tools.MA(dataArrayC),2)
         std = np.std(dataArrayC)
-        ub = boll + 2*std
-        lb = boll - 2*std
-        c = dataArrayC[0]
-        ulstatus = (c - lb)/(ub-lb)
-        cb = (c-boll) >= 0 
-        if cb:
-            bstatus = (c-boll)/(ub-boll)
-        else :
-            bstatus = (c-boll)/(boll-lb)
+        ub = round(boll + 2*std,2)
+        lb = round(boll - 2*std,2)
+        bollStatus =  round((ub-lb)/boll,3)
+        close = dataArrayC[0]
+        closeStatus = round((close - lb)/(ub-lb),2)
+#         cb = (close-boll) >= 0 
+#         if cb:
+#             bstatus = (c-boll)/(ub-boll)
+#         else :
+#             bstatus = (c-boll)/(boll-lb)
 #         需要计算以下状态
 #         1.价格在boll位置
 #         2.boll中轨朝向
 #         10295 9495
-        return "close = %s ,boll = %s ,ub = %s ,lb = %s,ulstatus = %s ,bstatus = %s"%(dataArrayC[0],boll,ub,lb,ulstatus,bstatus)
-
+        return {'boll':boll,'ub' : ub,'lb':lb,'bollStatus' : bollStatus,'closeStatus':closeStatus}
+#         return "close = %s ,boll = %s ,ub = %s ,lb = %s,ulstatus = %s ,bstatus = %s"%(dataArrayC[0],boll,ub,lb,ulstatus,bstatus)
         
     def getHistData(self,N=20):
 #         print '需要获取周期：%s，取得周期%s' % (ktype, N)
@@ -89,7 +89,7 @@ class stockK(object):
         self.listArray = df
         
         
-    def getHistWithValueType(self,type ='close'):
+    def getHistWithValueType(self, type ='close'):
 #         open   high  close    low     volume  price_change  p_change 
 #         ma5    ma10    ma20      v_ma5     v_ma10     v_ma20  turnover     
         return tools.dataFrameToArray(self.listArray[[type]].values)
