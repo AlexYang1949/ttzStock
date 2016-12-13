@@ -5,7 +5,7 @@ import tushare as ts
 import pymysql
 import pandas as pd
 
-# Obtain a database connection to the MySQL instance
+# 配置数据库信息
 config = {
     'host':'127.0.0.1',
     'port':3306,
@@ -17,9 +17,9 @@ config = {
 engine = pymysql.connect(**config)
 
 def info(data):
-	print('type=%s,value=%s'%(data.__class__,data))
+	print('type=%s,value=\n%s'%(data.__class__,data))
 
-def stockCodes():
+def get_hs300_data():
 	hs300 = ts.get_hs300s()
 	hs300CodeArr = []
 	for hs300Code in hs300.values:
@@ -27,46 +27,45 @@ def stockCodes():
 		hs300CodeArr.append(hs300Code[0])
 	# info(hs300CodeArr)
 
-def stock_h_data():
-	stock_h = ts.get_hist_data('600318')
-	insert_dataFrame_data(stock_h)
+def get_stock_data(code):
+    stock_h=ts.get_hist_data(code)
+    stock_h['code']=code
+    insert_dataFrame(stock_h)
 
-def insert_dataFrame_data(data):
-	data.to_sql('hs300',engine,if_exists='append')
-	# df = pd.read_sql('hs300',engine)
-	print(df)
+def insert_dataFrame(data):
+	# data.to_sql(name='hs300',schema='test1',con=engine,if_exists='append')
+    column_str = """date, code, open,
+                 high, close, low, volume,
+                 price_change, p_change"""
 
-def insert_daily_data_into_db(daily_data):
-    """
-    Takes a list of tuples of daily data and adds it to the
-    MySQL database. Appends the vendor ID and symbol ID to the data.
+    daily_data=[(index,row.code,row.open,row.high,row.close,row.low,row.volume,row.price_change,row.p_change)for index, row in data.iterrows()]
+    insert_str = ("%s, " * 9)[:-2]
+    final_str = "INSERT INTO hs300 (%s) VALUES (%s)"%\
+                (column_str,insert_str)
+    print(final_str)
+    with engine:
+        cur = engine.cursor()
+        cur.executemany(final_str,daily_data)
 
-    daily_data: List of tuples of the OHLC data (with 
-    adj_close and volume)
-    """
-    # Create the time now
-    now = datetime.datetime.utcnow()
+    quary()
 
-    # Amend the data to include the vendor ID and symbol ID
-    daily_data = [
-        (data_vendor_id, symbol_id, d[0], now, now,
-        d[1], d[2], d[3], d[4], d[5], d[6]) 
-        for d in daily_data
-    ]
-
-    # Create the insert strings
-    column_str = """code, name, data, open, 
-                 high, close, low, volume, 
-                 price_change, p_change, ma5,
-                 ma10, ma20, v_ma5, v_ma10, v_ma20, turnover"""
-    insert_str = ("%s, " * 11)[:-2]
-    final_str = "INSERT INTO hs300 (%s) VALUES (%s)" % \
-        (column_str, insert_str)
-    print('insert_str = '+insert_str+'final_str')
-    # Using the MySQL connection, carry out an INSERT INTO for every symbol
-    with con: 
-        cur = con.cursor()
-        # cur.executemany(final_str, daily_data)
+def quary():
+    select_sql = 'SELECT *FROM hs300'
+    cur = engine.cursor()
+    cur.execute(select_sql)
+    table_data = cur.fetchall()
+    for values in table_data:
+        info(values)
+    # info_arr = []
+    # for values in table_data:
+    #     length = len(values)
+    #     stock_info = []
+    #     for i in range(0,length-1):
+    #         stock_info.append(values[i])
+    #     info_arr.append(stock_info)
+    # print(info_arr)
+    cur.close()
 
 if __name__ == '__main__':
-	stock_h_data()
+    # get_stock_data('600318')
+    quary()

@@ -63,7 +63,7 @@ class stockK(object):
         
     def BOLL(self,ref=0):
         dataArrayC = self.getHistWithValueType('close')[0:20]
-        print len(dataArrayC)
+        print(len(dataArrayC))
         boll=round(tools.MA(dataArrayC),2)
         std = np.std(dataArrayC)
         ub = round(boll + 2*std,2)

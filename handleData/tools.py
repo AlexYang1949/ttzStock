@@ -18,10 +18,10 @@ def CROSS(values1=[1,2],values2=[3,4]):
     v20 = values2[0]
     v21 = values2[1]
     if(v10<v20 & v11>v21):
-        print '上穿'
+        print('上穿')
         return True
     else:
-        print '没有上穿'
+        print('没有上穿')
         return False
  
 def MA(datas):
