@@ -18,7 +18,7 @@ class stockK(object):
         self.code = code
         self.ktype = ktype
         self.listArray = None
-        self.getHistData()
+        self._getHistData()
     
     def K(self,M1=3,N=9,ref=0):
         dataArrayC = self.getHistWithValueType('close')
@@ -83,13 +83,13 @@ class stockK(object):
         return {'boll':boll,'ub' : ub,'lb':lb,'bollStatus' : bollStatus,'closeStatus':closeStatus}
 #         return "close = %s ,boll = %s ,ub = %s ,lb = %s,ulstatus = %s ,bstatus = %s"%(dataArrayC[0],boll,ub,lb,ulstatus,bstatus)
         
-    def getHistData(self,N=20):
+    def _getHistData(self,N=20):
 #         print '需要获取周期：%s，取得周期%s' % (ktype, N)
         df = ts.get_hist_data(self.code,start='2016-05-02',ktype=self.ktype)
         self.listArray = df
         
         
-    def getHistWithValueType(self, type ='close'):
+    def _getHistWithValueType(self, type ='close'):
 #         open   high  close    low     volume  price_change  p_change 
 #         ma5    ma10    ma20      v_ma5     v_ma10     v_ma20  turnover     
         return tools.dataFrameToArray(self.listArray[[type]].values)
