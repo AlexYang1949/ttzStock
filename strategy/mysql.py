@@ -24,6 +24,8 @@ create_table_sql = 'CREATE TABLE `hs300`( \
                 PRIMARY KEY (`date`)\
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;'
 
+
+
 with con:
     cur = con.cursor()
     cur.execute(create_table_sql)
