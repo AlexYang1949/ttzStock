@@ -2,6 +2,7 @@
 
 from tools.stockTools import stockTools
 
+
 if __name__=='__main__':
     stockTools.func()
     stockTools.func2()

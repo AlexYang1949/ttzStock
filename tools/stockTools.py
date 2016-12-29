@@ -74,16 +74,17 @@ class stockTools(object):
                 df.loc[beginDate] = [r, beginPrice, endPrice, date]
         return df
 
-
 def test():
     pass;
 
-
 if __name__ == '__main__':
     print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
     data1 = ts.get_hist_data(code='300126')
-    print(stockTools.dayOfIncre(data1, 5, 0.1))
-    print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    print(data1)
+    # print(stockTools.dayOfIncre(data1, 5, 0.1))
+    # print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
     # print(stockTools.SMA([7,2,3,4,5,6,1]))
     # Retrieve the Nifty data from Yahoo finance:
     # data = data.DataReader('^NSEI', data_source='yahoo', start='1/1/2010', end='1/1/2016')
