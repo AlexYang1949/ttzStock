@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a29d58-5110-472e-b41a-be1c3256e46e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/strategy/price_daily.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/strategy/tableSql.py" afterPath="$PROJECT_DIR$/strategy/tableSql.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ttzStock$tableSql.coverage" NAME="tableSql Coverage Results" MODIFIED="1483419227046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/strategy" />
+    <SUITE FILE_PATH="coverage/ttzStock$tableSql.coverage" NAME="tableSql Coverage Results" MODIFIED="1483429711340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/strategy" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -25,23 +24,23 @@
       <file leaf-file-name="tableSql.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/strategy/tableSql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1444">
-              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state relative-caret-position="251">
+              <caret line="137" column="54" lean-forward="true" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
               <folding>
-                <marker date="1483419227000" expanded="true" signature="1978:2005" ph="delete from " />
-                <marker date="1483419227000" expanded="true" signature="2323:2342" ph="select * fro... hs300" />
-                <marker date="1483419227000" expanded="true" signature="2847:2870" ph="select * fro... today_all" />
-                <marker date="1483419227000" expanded="true" signature="3401:3418" ph="select name missing_valuename" />
-                <marker date="1483419227000" expanded="true" signature="3401:3427" ph="select * fro... today_all" />
-                <marker date="1483419227000" expanded="true" signature="3458:3472" ph="select * fro... missing_value" />
-                <marker date="1483419227000" expanded="true" signature="3458:3480" ph="select * fro... " />
-                <marker date="1483419227000" expanded="true" signature="3458:3485" ph="select * fro... missing_value" />
-                <marker date="1483419227000" expanded="true" signature="3458:3488" ph="select * fro... missing_value" />
-                <marker date="1483419227000" expanded="true" signature="3534:3568" ph="select * fro... missing_value" />
-                <marker date="1483419227000" expanded="true" signature="3540:3568" ph="select * fro... missing_value" />
-                <marker date="1483419227000" expanded="true" signature="3828:3851" ph="select * fro... today_all" />
-                <marker date="1483419227000" expanded="true" signature="3996:4010" ph="select * fro... missing_value" />
-                <marker date="1483419227000" expanded="true" signature="3996:4020" ph="select * fro... stock_info" />
+                <element signature="e#43#63#0" expanded="true" />
+                <marker date="1483429711000" expanded="true" signature="1995:2022" ph="delete from " />
+                <marker date="1483429711000" expanded="true" signature="2340:2359" ph="select * fro... hs300" />
+                <marker date="1483429711000" expanded="true" signature="3105:3128" ph="select * fro... today_all" />
+                <marker date="1483429711000" expanded="true" signature="3624:3641" ph="select name missing_valuename" />
+                <marker date="1483429711000" expanded="true" signature="3624:3650" ph="select * fro... today_all" />
+                <marker date="1483429711000" expanded="true" signature="3681:3695" ph="select * fro... missing_value" />
+                <marker date="1483429711000" expanded="true" signature="3681:3703" ph="select * fro... " />
+                <marker date="1483429711000" expanded="true" signature="3681:3708" ph="select * fro... missing_value" />
+                <marker date="1483429711000" expanded="true" signature="3681:3711" ph="select * fro... missing_value" />
+                <marker date="1483429711000" expanded="true" signature="3757:3791" ph="select * fro... missing_value" />
+                <marker date="1483429711000" expanded="true" signature="3763:3791" ph="select * fro... missing_value" />
+                <marker date="1483429711000" expanded="true" signature="4329:4354" ph="select * fro... today_all" />
+                <marker date="1483429711000" expanded="true" signature="4329:4361" ph="select close... " />
               </folding>
             </state>
           </provider>
@@ -125,7 +124,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="70" />
+    <option name="x" value="110" />
     <option name="y" value="23" />
     <option name="width" value="1149" />
     <option name="height" value="709" />
@@ -444,7 +443,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="23" width="1149" height="709" extended-state="0" />
+    <frame x="110" y="23" width="1149" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24978241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -478,7 +477,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/strategy/tableSql.py</url>
-          <line>3</line>
+          <line>2</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -532,23 +531,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/strategy/tableSql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1444">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        <state relative-caret-position="251">
+          <caret line="137" column="54" lean-forward="true" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
           <folding>
-            <marker date="1483419227000" expanded="true" signature="1978:2005" ph="delete from " />
-            <marker date="1483419227000" expanded="true" signature="2323:2342" ph="select * fro... hs300" />
-            <marker date="1483419227000" expanded="true" signature="2847:2870" ph="select * fro... today_all" />
-            <marker date="1483419227000" expanded="true" signature="3401:3418" ph="select name missing_valuename" />
-            <marker date="1483419227000" expanded="true" signature="3401:3427" ph="select * fro... today_all" />
-            <marker date="1483419227000" expanded="true" signature="3458:3472" ph="select * fro... missing_value" />
-            <marker date="1483419227000" expanded="true" signature="3458:3480" ph="select * fro... " />
-            <marker date="1483419227000" expanded="true" signature="3458:3485" ph="select * fro... missing_value" />
-            <marker date="1483419227000" expanded="true" signature="3458:3488" ph="select * fro... missing_value" />
-            <marker date="1483419227000" expanded="true" signature="3534:3568" ph="select * fro... missing_value" />
-            <marker date="1483419227000" expanded="true" signature="3540:3568" ph="select * fro... missing_value" />
-            <marker date="1483419227000" expanded="true" signature="3828:3851" ph="select * fro... today_all" />
-            <marker date="1483419227000" expanded="true" signature="3996:4010" ph="select * fro... missing_value" />
-            <marker date="1483419227000" expanded="true" signature="3996:4020" ph="select * fro... stock_info" />
+            <element signature="e#43#63#0" expanded="true" />
+            <marker date="1483429711000" expanded="true" signature="1995:2022" ph="delete from " />
+            <marker date="1483429711000" expanded="true" signature="2340:2359" ph="select * fro... hs300" />
+            <marker date="1483429711000" expanded="true" signature="3105:3128" ph="select * fro... today_all" />
+            <marker date="1483429711000" expanded="true" signature="3624:3641" ph="select name missing_valuename" />
+            <marker date="1483429711000" expanded="true" signature="3624:3650" ph="select * fro... today_all" />
+            <marker date="1483429711000" expanded="true" signature="3681:3695" ph="select * fro... missing_value" />
+            <marker date="1483429711000" expanded="true" signature="3681:3703" ph="select * fro... " />
+            <marker date="1483429711000" expanded="true" signature="3681:3708" ph="select * fro... missing_value" />
+            <marker date="1483429711000" expanded="true" signature="3681:3711" ph="select * fro... missing_value" />
+            <marker date="1483429711000" expanded="true" signature="3757:3791" ph="select * fro... missing_value" />
+            <marker date="1483429711000" expanded="true" signature="3763:3791" ph="select * fro... missing_value" />
+            <marker date="1483429711000" expanded="true" signature="4329:4354" ph="select * fro... today_all" />
+            <marker date="1483429711000" expanded="true" signature="4329:4361" ph="select close... " />
           </folding>
         </state>
       </provider>
