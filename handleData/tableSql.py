@@ -3,7 +3,7 @@
 
 import tushare as ts
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import time
 
 from sqlalchemy import Column, String, create_engine
@@ -122,8 +122,20 @@ def test_zz500s():
 def test_pandas():
     pass
 
-def test_plot():
-    pass
+def get_base_data():
+    df = ts.get_stock_basics()
+    print(df)
+
+def plot_data():
+    df = pd.read_sql('select close,volume from sh_data;', con=con)
+    df['volume'] = df['volume'].apply(lambda v: v / 1500)
+    print(df)
+    df.plot(kind='line')
+    plt.show()
+
+def excuteSql(sql):
+    df = pd.read_sql(sql, con=con)
+    return df
 
 if __name__ == '__main__':
     # df = pd.read_sql('select * from today_all;', con=con)
@@ -134,8 +146,5 @@ if __name__ == '__main__':
     # df = pd.read_sql('select * from stock_info;' , con=con)
     # print(df)
     # insert_index_data('sh')
-    df = pd.read_sql('select close,volume from sh_data;', con=con)
-    df['volume'] = df['volume'].apply(lambda v:v/1500)
-    print(df)
-    df.plot(kind='line')
-    plt.show()
+    # print(df)
+    get_base_data()

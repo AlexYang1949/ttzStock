@@ -21,23 +21,18 @@ def thirtyMinWork():
     printInfo(stock30)
 
 def printInfo(stock):
-    print datetime.now()
-    print stock.code
+    print(datetime.now())
+    print(stock.code)
 #     print stock.getHistWithValueType(type = 'high')
-    print stock.K()
-    print stock.D()
-    print stock.kdStatus()
-    print stock.BOLL()
+    print(stock.K())
+    print(stock.D())
+    print(stock.kdStatus())
+    print(stock.BOLL())
     
 def printKInfo():
     stock = stockK(code='399001',ktype='30')
-    print stock.listArray
-    
-def print1():
-    print '1'
-    
-def print2():
-    print '2'
+    print(stock.listArray)
+
     
 def thread1():
     tools.scheWithTrigger(name = SixtyMinWork ,second='10,30')
