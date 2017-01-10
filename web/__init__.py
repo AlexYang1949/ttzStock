@@ -30,7 +30,7 @@ def stock():
     
 @app.route('/stock/<code>')
 def stockInfo(code):
-    print request.json 
+    print(request.json)
     stock = stockK('399001')
     return render_template('stock.html',code = code , k = stock.K() , d = stock.D(),status = stock.kdStatus())
 

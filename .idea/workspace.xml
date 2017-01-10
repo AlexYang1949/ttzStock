@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a29d58-5110-472e-b41a-be1c3256e46e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/handleData/wlzq.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/handleData/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/handleData/lesson2.ipynb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/strategy/tableSql.py" afterPath="$PROJECT_DIR$/handleData/tableSql.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/handleData/table_handle.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dataSource/stockInfo.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/handleData/tableSql.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/handleData/tools.py" afterPath="$PROJECT_DIR$/lib/tools.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSource/__init__.py" afterPath="$PROJECT_DIR$/dataSource/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/visual/__init__.py" afterPath="$PROJECT_DIR$/visual/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/__init__.py" afterPath="$PROJECT_DIR$/web/__init__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,9 +19,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ttzStock$table_handle.coverage" NAME="table_handle Coverage Results" MODIFIED="1484031879016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/handleData" />
     <SUITE FILE_PATH="coverage/ttzStock$mplot.coverage" NAME="mplot Coverage Results" MODIFIED="1483941391234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
-    <SUITE FILE_PATH="coverage/ttzStock$tableSql.coverage" NAME="tableSql Coverage Results" MODIFIED="1483587149708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/strategy" />
-    <SUITE FILE_PATH="coverage/ttzStock$wlzq.coverage" NAME="wlzq Coverage Results" MODIFIED="1483931371013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/handleData" />
+    <SUITE FILE_PATH="coverage/ttzStock$tableSql.coverage" NAME="tableSql Coverage Results" MODIFIED="1484016818819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/strategy" />
+    <SUITE FILE_PATH="coverage/ttzStock$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1484019229103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visual" />
+    <SUITE FILE_PATH="coverage/ttzStock$wlzq.coverage" NAME="wlzq Coverage Results" MODIFIED="1484019606433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/handleData" />
+    <SUITE FILE_PATH="coverage/ttzStock$insert_symbols.coverage" NAME="insert_symbols Coverage Results" MODIFIED="1484019559785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sql" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -27,102 +32,86 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tableSql.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handleData/tableSql.py">
+      <file leaf-file-name="table_handle.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/handleData/table_handle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="137" column="13" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+            <state relative-caret-position="176">
+              <caret line="117" column="18" lean-forward="true" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
               <folding>
-                <element signature="e#43#63#0" expanded="true" />
-                <marker date="1483933449000" expanded="true" signature="1997:2024" ph="delete from " />
-                <marker date="1483933449000" expanded="true" signature="2342:2361" ph="select * fro... hs300" />
-                <marker date="1483933449000" expanded="true" signature="3107:3130" ph="select * fro... today_all" />
-                <marker date="1483933449000" expanded="true" signature="3626:3643" ph="select name missing_valuename" />
-                <marker date="1483933449000" expanded="true" signature="3626:3652" ph="select * fro... today_all" />
-                <marker date="1483933449000" expanded="true" signature="3683:3697" ph="select * fro... missing_value" />
-                <marker date="1483933449000" expanded="true" signature="3683:3705" ph="select * fro... " />
-                <marker date="1483933449000" expanded="true" signature="3683:3710" ph="select * fro... missing_value" />
-                <marker date="1483933449000" expanded="true" signature="3683:3713" ph="select * fro... missing_value" />
-                <marker date="1483933449000" expanded="true" signature="3759:3793" ph="select * fro... missing_value" />
-                <marker date="1483933449000" expanded="true" signature="3765:3793" ph="select * fro... missing_value" />
-                <marker date="1483933449000" expanded="true" signature="4083:4115" ph="select close... " />
-                <marker date="1483933449000" expanded="true" signature="4532:4556" ph="select * fro... stock_info" />
+                <element signature="e#44#64#0" expanded="true" />
+                <marker date="1484031164000" expanded="true" signature="2079:2106" ph="delete from " />
+                <marker date="1484031164000" expanded="true" signature="2744:2767" ph="select * fro... today_all" />
+                <marker date="1484031164000" expanded="true" signature="3594:3610" ph="select * fro... missing_value" />
+                <marker date="1484031164000" expanded="true" signature="3934:3966" ph="select close... " />
+                <marker date="1484031164000" expanded="true" signature="4459:4507" ph="select * fro... stock_basics" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mplot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot/mplot.py">
+      <file leaf-file-name="wlzq.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handleData/wlzq.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="75">
+              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stockTools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/stockTools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-705">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
               <folding>
-                <element signature="e#23#62#0" expanded="true" />
-                <marker date="1483941474000" expanded="true" signature="484:520" ph="select * fro... stock_info" />
-                <marker date="1483941474000" expanded="true" signature="484:522" ph="select * fro... stock_info" />
+                <element signature="e#24#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pyplot.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/pyplot.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/visual/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="358" column="14" lean-forward="true" selection-start-line="358" selection-start-column="14" selection-end-line="358" selection-end-column="14" />
+            <state relative-caret-position="135">
+              <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+              <folding>
+                <element signature="e#25#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="artist.py" pinned="false" current-in-tab="true">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/artist.py">
+      <file leaf-file-name="insert_symbols.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/insert_symbols.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="1394" column="0" lean-forward="true" selection-start-line="1394" selection-start-column="0" selection-end-line="1394" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dates.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/dates.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="371" column="35" lean-forward="false" selection-start-line="371" selection-start-column="32" selection-end-line="371" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="finance.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/finance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-97">
-              <caret line="697" column="4" lean-forward="false" selection-start-line="697" selection-start-column="4" selection-end-line="697" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sql.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/sql.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-739">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1482114262000" expanded="true" signature="905:945" ph="INSERT INTO daily_price... " />
+                <marker date="1481596168000" expanded="true" signature="1954:1989" ph="INSERT INTO symbol... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#31#60#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,8 +127,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tools.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handleData/tools.py">
+      <file leaf-file-name="stockK.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataSource/stockK.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -153,6 +142,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Setup Script" />
         <option value="Python Script" />
       </list>
     </option>
@@ -174,9 +164,14 @@
         <option value="/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/tushare/stock/fundamental.py" />
         <option value="$PROJECT_DIR$/plot/matplotlib.py" />
         <option value="$PROJECT_DIR$/handleData/wlzq.py" />
-        <option value="$PROJECT_DIR$/handleData/tableSql.py" />
         <option value="$PROJECT_DIR$/dataSource/__init__.py" />
         <option value="$PROJECT_DIR$/plot/mplot.py" />
+        <option value="$PROJECT_DIR$/strategy/strategy.py" />
+        <option value="$PROJECT_DIR$/web/__init__.py" />
+        <option value="$PROJECT_DIR$/lib/tools.py" />
+        <option value="$PROJECT_DIR$/visual/__init__.py" />
+        <option value="$PROJECT_DIR$/handleData/tableSql.py" />
+        <option value="$PROJECT_DIR$/handleData/table_handle.py" />
       </list>
     </option>
   </component>
@@ -187,8 +182,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="61" />
-    <option name="y" value="23" />
+    <option name="x" value="201" />
+    <option name="y" value="480" />
     <option name="width" value="1149" />
     <option name="height" value="709" />
   </component>
@@ -207,7 +202,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -245,7 +239,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
+              <option name="myItemId" value="tools" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -259,7 +253,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plot" />
+              <option name="myItemId" value="strategy_model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ttzStock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ttzStock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,6 +301,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -304,9 +313,11 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/handleData" />
+      <recent name="$PROJECT_DIR$/strategy_model" />
+      <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mplot">
+  <component name="RunManager" selected="Python.table_handle">
     <configuration default="false" name="tableSql" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -343,20 +354,56 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="mplot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/visual" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ttzStock" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/mplot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visual/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="insert_symbols" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sql" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ttzStock" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sql/insert_symbols.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="table_handle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/handleData" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ttzStock" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/handleData/table_handle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -575,16 +622,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.tableSql" />
       <item index="1" class="java.lang.String" itemvalue="Python.wlzq" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mplot" />
+      <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
+      <item index="3" class="java.lang.String" itemvalue="Python.insert_symbols" />
+      <item index="4" class="java.lang.String" itemvalue="Python.table_handle" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.mplot" />
-        <item index="1" class="java.lang.String" itemvalue="Python.wlzq" />
-        <item index="2" class="java.lang.String" itemvalue="Python.tableSql" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.table_handle" />
+        <item index="1" class="java.lang.String" itemvalue="Python.tableSql" />
+        <item index="2" class="java.lang.String" itemvalue="Python.wlzq" />
+        <item index="3" class="java.lang.String" itemvalue="Python.insert_symbols" />
+        <item index="4" class="java.lang.String" itemvalue="Python.__init__" />
       </list>
     </recent_temporary>
   </component>
@@ -611,17 +662,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="23" width="1149" height="709" extended-state="0" />
-    <editor active="true" />
+    <frame x="201" y="480" width="1149" height="709" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25925925" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2710027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.50316167" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901135" sideWeight="0.4968383" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -631,6 +681,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -642,12 +693,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/handleData/tableSql.py</url>
-          <line>2</line>
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -656,26 +701,85 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#31#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataSource/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataSource/stockK.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataSource/goldInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handleData/tableSql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/mplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+          <folding>
+            <element signature="e#23#62#0" expanded="false" />
+            <marker date="1483941474000" expanded="true" signature="484:520" ph="select * fro... stock_info" />
+            <marker date="1483941474000" expanded="true" signature="484:522" ph="select * fro... stock_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handleData/tableSql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/mplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+          <folding>
+            <element signature="e#23#62#0" expanded="false" />
+            <marker date="1483941474000" expanded="true" signature="484:520" ph="select * fro... stock_info" />
+            <marker date="1483941474000" expanded="true" signature="484:522" ph="select * fro... stock_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/handleData/tableSql.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1875">
           <caret line="125" column="18" lean-forward="false" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
-          <folding>
-            <element signature="e#43#63#0" expanded="true" />
-            <marker date="1483933449000" expanded="true" signature="1997:2024" ph="delete from " />
-            <marker date="1483933449000" expanded="true" signature="2342:2361" ph="select * fro... hs300" />
-            <marker date="1483933449000" expanded="true" signature="3107:3130" ph="select * fro... today_all" />
-            <marker date="1483933449000" expanded="true" signature="3626:3643" ph="select name missing_valuename" />
-            <marker date="1483933449000" expanded="true" signature="3626:3652" ph="select * fro... today_all" />
-            <marker date="1483933449000" expanded="true" signature="3683:3697" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="3683:3705" ph="select * fro... " />
-            <marker date="1483933449000" expanded="true" signature="3683:3710" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="3683:3713" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="3759:3793" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="3765:3793" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="4083:4115" ph="select close... " />
-            <marker date="1483933449000" expanded="true" signature="4532:4556" ph="select * fro... stock_info" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,15 +794,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1335">
           <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handleData/tools.py">
+    <entry file="file://$PROJECT_DIR$/lib/tools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#31#60#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -707,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2085">
           <caret line="139" column="4" lean-forward="false" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32715">
           <caret line="2181" column="53" lean-forward="false" selection-start-line="2181" selection-start-column="46" selection-end-line="2181" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4710">
           <caret line="320" column="8" lean-forward="false" selection-start-line="320" selection-start-column="8" selection-end-line="320" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17685">
           <caret line="1179" column="37" lean-forward="false" selection-start-line="1179" selection-start-column="30" selection-end-line="1179" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,11 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4725">
           <caret line="334" column="24" lean-forward="false" selection-start-line="334" selection-start-column="13" selection-end-line="334" selection-end-column="24" />
-          <folding>
-            <marker date="1480386278000" expanded="true" signature="48345:48376" ph="INSERT INTO missing_value... " />
-            <marker date="1480386278000" expanded="true" signature="56606:56685" ph="SELECT name sqlite_master" />
-            <marker date="1480386278000" expanded="true" signature="56934:56945" ph="DROP TABLE m... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,7 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="76" column="17" lean-forward="false" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,7 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32550">
           <caret line="2181" column="53" lean-forward="false" selection-start-line="2181" selection-start-column="46" selection-end-line="2181" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4710">
           <caret line="320" column="8" lean-forward="false" selection-start-line="320" selection-start-column="8" selection-end-line="320" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16890">
           <caret line="1179" column="37" lean-forward="false" selection-start-line="1179" selection-start-column="30" selection-end-line="1179" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,27 +881,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4725">
           <caret line="334" column="24" lean-forward="false" selection-start-line="334" selection-start-column="13" selection-end-line="334" selection-end-column="24" />
-          <folding>
-            <marker date="1480386278000" expanded="true" signature="48345:48376" ph="INSERT INTO missing_value... " />
-            <marker date="1480386278000" expanded="true" signature="56606:56685" ph="SELECT name sqlite_master" />
-            <marker date="1480386278000" expanded="true" signature="56934:56945" ph="DROP TABLE m... " />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot/matplotlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/plot/matplotlib.py" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/tushare/stock/cons.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="268" column="8" lean-forward="false" selection-start-line="268" selection-start-column="8" selection-end-line="268" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,20 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1278">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482200953000" expanded="true" signature="552:581" ph="SELECT id, t... symbol" />
-            <marker date="1482200953000" expanded="true" signature="2886:2926" ph="INSERT INTO daily_price... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/insert_symbols.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481596168000" expanded="true" signature="1954:1989" ph="INSERT INTO symbol... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,23 +910,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5352">
           <caret line="366" column="15" lean-forward="false" selection-start-line="366" selection-start-column="15" selection-end-line="366" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handleData/wlzq.py">
+    <entry file="file://$PROJECT_DIR$/plot/mplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="570">
+          <caret line="42" column="14" lean-forward="false" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+          <folding>
+            <element signature="e#23#62#0" expanded="false" />
+            <marker date="1483941474000" expanded="true" signature="484:520" ph="select * fro... stock_info" />
+            <marker date="1483941474000" expanded="true" signature="484:522" ph="select * fro... stock_info" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handleData/tools.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="15">
+          <caret line="815" column="32" lean-forward="false" selection-start-line="815" selection-start-column="32" selection-end-line="815" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/artist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20670">
+          <caret line="1393" column="0" lean-forward="false" selection-start-line="1393" selection-start-column="0" selection-end-line="1393" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/dates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5190">
+          <caret line="371" column="35" lean-forward="false" selection-start-line="371" selection-start-column="32" selection-end-line="371" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4620">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/finance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10125">
+          <caret line="697" column="4" lean-forward="false" selection-start-line="697" selection-start-column="4" selection-end-line="697" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/create_table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -878,49 +977,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handleData/tableSql.py">
+    <entry file="file://$PROJECT_DIR$/strategy/strategy.py" />
+    <entry file="file://$PROJECT_DIR$/strategy/long_strategy.py" />
+    <entry file="file://$PROJECT_DIR$/dataSource/stockInfo.py" />
+    <entry file="file://$PROJECT_DIR$/dataSource/goldInfo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="137" column="13" lean-forward="false" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
-          <folding>
-            <element signature="e#43#63#0" expanded="true" />
-            <marker date="1483933449000" expanded="true" signature="1997:2024" ph="delete from " />
-            <marker date="1483933449000" expanded="true" signature="2342:2361" ph="select * fro... hs300" />
-            <marker date="1483933449000" expanded="true" signature="3107:3130" ph="select * fro... today_all" />
-            <marker date="1483933449000" expanded="true" signature="3626:3643" ph="select name missing_valuename" />
-            <marker date="1483933449000" expanded="true" signature="3626:3652" ph="select * fro... today_all" />
-            <marker date="1483933449000" expanded="true" signature="3683:3697" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="3683:3705" ph="select * fro... " />
-            <marker date="1483933449000" expanded="true" signature="3683:3710" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="3683:3713" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="3759:3793" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="3765:3793" ph="select * fro... missing_value" />
-            <marker date="1483933449000" expanded="true" signature="4083:4115" ph="select close... " />
-            <marker date="1483933449000" expanded="true" signature="4532:4556" ph="select * fro... stock_info" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/dates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="371" column="35" lean-forward="false" selection-start-line="371" selection-start-column="32" selection-end-line="371" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/finance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="697" column="4" lean-forward="false" selection-start-line="697" selection-start-column="4" selection-end-line="697" selection-end-column="4" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -933,31 +996,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot/mplot.py">
+    <entry file="file://$PROJECT_DIR$/dataSource/stockK.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#23#62#0" expanded="true" />
-            <marker date="1483941474000" expanded="true" signature="484:520" ph="select * fro... stock_info" />
-            <marker date="1483941474000" expanded="true" signature="484:522" ph="select * fro... stock_info" />
+            <element signature="e#31#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/pyplot.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="358" column="14" lean-forward="true" selection-start-line="358" selection-start-column="14" selection-end-line="358" selection-end-column="14" />
+        <state relative-caret-position="45">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/matplotlib/artist.py">
+    <entry file="file://$PROJECT_DIR$/web/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="1394" column="0" lean-forward="true" selection-start-line="1394" selection-start-column="0" selection-end-line="1394" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visual/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding>
+            <element signature="e#25#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/insert_symbols.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-739">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1481596168000" expanded="true" signature="1954:1989" ph="INSERT INTO symbol... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/stockTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-705">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handleData/wlzq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handleData/tableSql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="150" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handleData/table_handle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="117" column="18" lean-forward="true" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
+          <folding>
+            <element signature="e#44#64#0" expanded="true" />
+            <marker date="1484031164000" expanded="true" signature="2079:2106" ph="delete from " />
+            <marker date="1484031164000" expanded="true" signature="2744:2767" ph="select * fro... today_all" />
+            <marker date="1484031164000" expanded="true" signature="3594:3610" ph="select * fro... missing_value" />
+            <marker date="1484031164000" expanded="true" signature="3934:3966" ph="select close... " />
+            <marker date="1484031164000" expanded="true" signature="4459:4507" ph="select * fro... stock_basics" />
+          </folding>
         </state>
       </provider>
     </entry>
